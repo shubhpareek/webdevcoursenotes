@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Site</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    article {
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    p {
+      color: #666;
+    }
+
+    .create-blog {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .create-blog input {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Tasks</h1>
+  </header>
+
+  <section>
+    <!-- <article>
+      <h2>Blog Post Title 1</h2>
+      <h4>Date: 11</h4>
+      <p>This is a sample blog post. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.</p>
+      <a href="#">Read More</a>
+    </article>
+
+    <article>
+      <h2>Blog Post Title 2</h2>
+      <p>Another sample blog post. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <a href="#">Read More</a>
+    </article> -->
+    <% for(let i=0;i<blogList.length;i++) {%>
+        <article>
+            <h2><%= blogList[i].title  %></h2>
+            <h4><%= blogList[i].date %></h4>
+            <p><%=  blogList[i].data %></p>
+        </article>
+    <% } %>
+
+
+    <!-- More blog posts go here -->
+
+  </section>
+
+  <form class ="create-blog" action="/create" method="get">
+    <input type="submit" value="create a task ">
+  </form>
+  <form class ="create-blog" action="/remove" method="get">
+    <input type="submit" value="remove a task">
+  </form>
+
+</body>
+
+</html>
