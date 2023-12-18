@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+
+    #gif-container {
+      margin-bottom: 20px;
+    }
+
+    #random-button {
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <form action="/" method="post">
+    <input id="random-button"  type="submit" value="Get random Gif">
+    <!-- The button triggers a form submission to the same page ("/") -->
+  </form>
+
+  <div id="gif-container">
+    <!-- Replace the placeholder URL with the actual URL of your GIF -->
+    <iframe src="<%= LinkGif %>" alt="https://placekitten.com/300/200">
+  </div>
+  <br>
+  <br>
+  <h1>hello</h1>
+
+
+</body>
+
+</html>
